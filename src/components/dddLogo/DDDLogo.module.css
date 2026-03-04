@@ -1,0 +1,87 @@
+.relative {
+  position: relative;
+  width: 260px;
+  height: 108px;
+}
+
+.dddLogo {
+  width: 128px;
+  height: 108px;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.7));
+}
+
+.spreadFirst {
+  rotate: 2.5deg;
+  animation: spreadFirst 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;
+}
+.spreadSecond {
+  rotate: 0deg;
+}
+.spreadThird {
+  rotate: -2.5deg;
+  animation: spreadThird 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;
+}
+
+/* 첫 번째 D: 가장 어둡고 뒤에 고정 */
+.firstD {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(65px);
+}
+.firstShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(70px);
+}
+
+.secondD {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: translateX(35px);
+}
+.secondShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: translateX(40px);
+}
+
+.thirdD {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: translateX(0px);
+}
+.thirdShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: translateX(5px);
+}
+
+@keyframes spreadFirst {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes spreadThird {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
